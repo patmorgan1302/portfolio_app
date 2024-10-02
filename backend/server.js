@@ -24,7 +24,7 @@ app.use('/api/projects', projectRoutes);
 
 const __dirname = path.resolve(); 
 
-if (process.env.NODE_ENV === 'development') { 
+if (process.env.NODE_ENV === 'production') { 
   // set static folder
   app.use(express.static(path.join(__dirname, '/frontend/build')));
 
