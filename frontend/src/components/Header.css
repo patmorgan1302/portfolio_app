@@ -1,0 +1,12 @@
+.header {
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #44a2ff;
+    -webkit-box-shadow: 8px 8px 8px rgb(16, 66, 174);
+    -moz-box-shadow:    8px 8px 8px rgb(26, 29, 159);
+    box-shadow:         8px 8px 8px rgb(125, 180, 252);
+    z-index:999;
+}

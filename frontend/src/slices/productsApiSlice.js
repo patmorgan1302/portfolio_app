@@ -5,6 +5,7 @@ export const productsApiSlice = apiSlice.injectEndpoints({
     endpoints: (builder) => ({
         getProducts: builder.query({
             query: () => ({
+                mode: 'no-cors',
                 url: PRODUCTS_URL,
              
             }),

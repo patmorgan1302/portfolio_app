@@ -11,15 +11,18 @@ import HomeScreen from './screens/HomeScreen';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import App from './App';
-import ProductScreen from './screens/ProductScreen';
+// import ProductScreen from './screens/ProductScreen';
+import ProjectDetailsScreen from './screens/ProjectDetailsScreen';
 import CartScreen from './screens/ProductScreen';
+import ProjectScreen from './screens/ProductScreen';
 
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App />}>
       <Route index={true} path='/' element={<HomeScreen />} />
-      <Route path='/product/:id' element={<ProductScreen />} />
+      <Route path='/' element={<ProjectScreen />} />
+      <Route path='/project/:id' element={<ProjectDetailsScreen />} />
       <Route path='/cart' element={<CartScreen />} />
     </Route>
   )

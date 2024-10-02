@@ -1,4 +1,4 @@
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Image } from 'react-bootstrap';
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -8,7 +8,7 @@ const Footer = () => {
             <Container>
                 <Row>
                     <Col className='text-center py-3'>
-                        <p>&copy; {currentYear} My Portfolio</p>
+                        <p>&copy; {currentYear} Princess Dynamite Designs © // YNGLD Designs ©</p>
                     </Col>
                 </Row>
             </Container>
@@ -17,4 +17,4 @@ const Footer = () => {
 
 }
 
-export default Footer;
+export default Footer;  

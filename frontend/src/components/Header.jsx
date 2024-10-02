@@ -1,40 +1,43 @@
-import { Navbar, Nav, Container, Badge } from 'react-bootstrap';
-import { FaShoppingCart, FaUser } from 'react-icons/fa';
-import { useSelector } from 'react-redux';
+import { Navbar, Nav, Container } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
+import { Link } from 'react-router-dom';
+// import './Header.css'
 
 const Header = () => {
-    const { cartItems } = useSelector((state) => state.cart);
-    console.log(cartItems);
 
     return (
-        <header className="header">
-            <Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect>
+        <header style={{ opacity: '0.7', padding: '12px', backgroundColor: '#FFFBE6' }} className="shadow p-3 mb-5 bg-white rounded">
+            <Navbar expand='lg' collapseOnSelect>
                 <Container>
                     <LinkContainer to='/'>
-                        <Navbar.Brand>Portfolio</Navbar.Brand>
+                        <Navbar.Brand ><strong>
+                        PATRICK MORGAN
+                        </strong></Navbar.Brand>
                     </LinkContainer>
              
                     <Navbar.Toggle aria-controls='basic-navbar-nav' />
                     <Navbar.Collapse id='basic-navbar-nav'>
                         <Nav className='ml-auto'>
 
-                            <LinkContainer to='/cart'>
-                                <Nav.Link>
-                                    <FaShoppingCart /> Cart
-                                    {cartItems.length > 0 && (
-                                        <Badge pill bg='success' style={{ marginLeft: '5px'}}>
-                                            {cartItems.reduce((a, c) => a + c.qty, 0)}
-                                        </Badge>
-                                    )}
-                                </Nav.Link>
-                            </LinkContainer>
+                        
                            
-                           <LinkContainer to='/login'>
-                                <Nav.Link href='/login'>
-                                    <FaUser /> Sign In
+                           <LinkContainer to='/'>
+                                <Nav.Link onClick={() => window.location.replace("/#projects")}>
+                                    Projects
                                 </Nav.Link>
-                           </LinkContainer>
+                           </LinkContainer> 
+
+                           <LinkContainer to='/'>
+                                <Nav.Link onClick={() => window.location.replace("/#experience")}>
+                                    Experience
+                                </Nav.Link>
+                           </LinkContainer> 
+
+                           <LinkContainer to='/'>
+                                <Nav.Link onClick={() => window.location.replace("/#contact")}>
+                                    Contact
+                                </Nav.Link>
+                           </LinkContainer> 
                             
                         </Nav>
                     </Navbar.Collapse>
