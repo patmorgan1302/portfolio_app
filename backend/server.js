@@ -9,11 +9,13 @@ import productRoutes from './routes/productRoutes.js';
 import projectRoutes from './routes/projectRoutes.js';
 
 
-const port = process.env.PORT || 5000;
 
 connectDB();
 
 const app = express();
+
+
+const port = process.env.PORT || 5000;
 
 app.use(cors());
 
@@ -22,7 +24,7 @@ app.use('/api/projects', projectRoutes);
 
 const __dirname = path.resolve(); 
 
-if (process.env.NODE_ENV === 'production') { 
+if (process.env.NODE_ENV === 'development') { 
   // set static folder
   app.use(express.static(path.join(__dirname, '/frontend/build')));
 
