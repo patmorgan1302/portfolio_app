@@ -1,5 +1,4 @@
 import { Row, Col, Image, Container } from 'react-bootstrap';
-import { useParams, Link } from 'react-router-dom';
 import Project from '../components/Project';
 import Loader from '../components/Loader';
 import Message from '../components/Message';
@@ -79,7 +78,6 @@ const HomeScreen = () => {
                             </Row>
                             <h5 className="py-3" style={{ textAlign: 'left'}}>
                                 <ContactForm />
-                                {/* I am currently available for new projects and collaborations. */}
                             </h5>
                         </Container>
                     </Row>
