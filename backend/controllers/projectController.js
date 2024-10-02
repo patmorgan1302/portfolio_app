@@ -1,5 +1,5 @@
 import asyncHandler from '../middleware/asyncHandler.js';
-import Project from '../models/ProjectModel.js';
+import Project from '../models/projectModel.js';
 
 
 // @desc    Fetch all products

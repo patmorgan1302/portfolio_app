@@ -9,11 +9,11 @@ const projectSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    technology_stack: {
+    description: {
         type: String,
         required: true
     },
-    description: {
+    technology_stack: {
         type: String,
         required: true
     },
